@@ -1,4 +1,4 @@
-/* // STRINGS
+// STRINGS
 // Variable - Most basic building block
 // Variables - Store, access, modify === value
 // Declare, assignment operator, assign value
@@ -68,10 +68,10 @@ console.log(url)
 
 // Loosely Typed = You don't have to declare variable types
 
-const number = 34 // Integers
+const numberY = 34 // Integers
 let pants = 2.466 // Decimal aka Floating point numbers
 
-console.log(number * pants)
+console.log(numberY * pants)
 
 // Basic math operations
 const number1 = 10
@@ -103,7 +103,7 @@ console.log(number)
 number++
 console.log(number)
 number--
-console.log(number) 
+console.log(number)
 
 // Implicit type conversion
 
@@ -113,7 +113,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
   let name = document.getElementById('name').value
   value = parseInt(value)
   console.log('Hello ' + name + ' ' + 'You entered ' + value)
-}) */
+})
 
 // Data Types - 7 total
 // Primitive - String, Number, Boolean, Null, Undefined, Symbol
@@ -124,7 +124,7 @@ document.querySelector('.form').addEventListener('submit', function (e) {
 // String
 const text = 'Some text'
 // Number
-const number = 45
+const numberX = 45
 // Boolean
 let valueA = true
 let valueB = false
