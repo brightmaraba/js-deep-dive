@@ -1,140 +1,117 @@
-/* // STRINGS
-// Variable - Most basic building block
-// Variables - Store, access, modify === value
-// Declare, assignment operator, assign value
-// Rules
-// - Can contain digits, letters, underscore and $ sign
-// - must start with a letter, underscore _ or $
-// - cannot be keywords
-// - cannot start with a number
-// - case sensitive : FullName is not same as fullName nor fullname
-// - camelCase or camel_case or _camelCase
-let myName = 'Brian Koech'
-let address, state, postcode
+// Arrays, Functions and Objects
+// Arrays ->
+// Created using square brackets [], 0 index based
+// const friend1 = 'Ann'
+// const friend2 = 'Bella'
+// const friend3 = 'Caren'
+// const friend4 = 'Daniella'
 
-address = '25 A Sussex Street'
-state = 'Western Australia'
-postcode = 6061
+// const femaleFriends = [friend1, friend2, friend3, friend4]
 
-console.log(myName, address, state, postcode)
+// console.log(femaleFriends)
 
-// Modify
+// const briansDetails = [
+//   'Brian',
+//   'Koech',
+//   '25 A Greydon Street',
+//   'Nollamara',
+//   6061,
+//   undefined,
+//   null,
+// ]
 
-myName = 'Koech Kimurgor'
-address = '15 Davenport St'
-console.log(myName, address, state, postcode)
+// console.log(briansDetails)
 
-// Other key words to declare variables include var and const
-// Var was replaced by var and let i.e var is deprecated.
-// const are used to define variables that cannot be reassigned
+// Accessing objects in arrays
+// console.log(femaleFriends[3]) // Index starts at 0
+// arrayLength = femaleFriends.length
+// console.log(arrayLength)
+// bestFriend = femaleFriends[3] // Access array object using index
+// console.log(bestFriend)
+// address = briansDetails[2]
+// console.log(address)
+// femaleFriends[4] = 'Esther' // Assign more objects to array
+// console.log(femaleFriends)
 
-const pi = 22 / 7
-let radius = 22
-let circleArea = pi * (radius * radius)
-console.log(circleArea)
+// Functions - Essential building blocks of JS Programmes
+// Declare, then invoke - Allows us to reuse pieces of code without copy + paste
+// Params - when to declare/define
+// Params - placeholder or local variables accessible inside a funtion
+// Arguments - Same thing, but reference to parsing during invocation
+// use vars/values, multiple params, undefined
 
-// Let's try to assign const pi
-// pi = 3.1; // Generates an Error
+// Declare
+function hello() {
+  console.log('Hello there, Daniel')
+}
+// Invoke
+hello()
 
-// Strings
-// String can be created by using both double quotes ("My name is Brian")
-// Or by using single quotes ('My name is Brian')
-// You cannot mix them
+// Set up parameters
+function helloFriend(friend) {
+  console.log('Hello there ' + friend)
+}
+// Invoke function and parse arguments
+helloFriend('Brian')
+// Multiple params
+function helloFriends(friend1, friend2) {
+  console.log('Hello ' + friend1 + ' and ' + friend2)
+}
+helloFriends('Brian', 'Ronald')
 
-// What if therre is a singl word inside the senteces eg. Brian's?
-// Either escape 'Brian\'s car is awesome
-// OR use double quotes outside and single ' inside
-let mySentence = "Brian's car is awesome"
-let mySecondSentence = "Brian's car is awesomee"
-console.log(mySentence)
-console.log(mySecondSentence)
+// Return statement
+const wallHeight = 80
 
-// String concatanation - Combining string values
-// `` - Use backticks (template strings) easier option for dealing with strings
-const firstName = 'Brian'
-const lastName = 'Koech'
-let fullName = firstName + ' ' + lastName
+function convert(value) {
+  // const newValue = value * 2.54
+  return value * 2.54
+}
 
-console.log('Hello there, your full name is: ' + firstName + ' ' + lastName)
-console.log(fullName)
+const width = convert(100)
+const height = convert(wallHeight)
 
-// Create a website using strings
-const website = 'google'
-const url = 'https://www.' + website + '.com'
+dimension = [width, height]
 
-console.log(url)
+console.log(dimension)
 
-// Numbers
+const area = dimension[0] * dimension[1]
+console.log(area)
+const perimeter = 2 * (dimension[0] + dimension[1])
+console.log(perimeter)
 
-// Loosely Typed = You don't have to declare variable types
+// Variable expression
+const add = function (num1, num2) {
+  return num1 + num2
+}
 
-const number = 34 // Integers
-let pants = 2.466 // Decimal aka Floating point numbers
+console.log(add(10, 30))
+console.log(add(100, 200))
 
-console.log(number * pants)
+// Use directly in arrays
+const values = [add(10, 20), add(21, 34), add(45, 66)]
+console.log(values)
 
-// Basic math operations
-const number1 = 10
-const number2 = 5
+// Arrow function
+const multiply = (num1, num2) => num1 * num2
+console.log(multiply(10, 100))
 
-const add = number1 + number2
-const sub = number2 - number1
-const mult = number1 * number2
-const div = number2 / number1
+// Objects - Key-Value pairs
+// If value is a fuction, then the object is a method
 
-console.log(add, sub, mult, div)
+const person = {
+  firstName: 'Brian',
+  secondName: 'Koech',
+  address: '25 A Quahoq',
+  age: 40,
+  education: 'Postgraduate',
+  married: true,
+  siblings: ['Anna', 'Beatrice', 'Jackline'],
+  greeting() {
+    console.log('Hello my name is John')
+  },
+}
 
-// +=, -=, /=, ++, --, %
-// Operate on variable in one line
-// Modulus % gives the reminder of a division
-
-let number = 50
-console.log(number)
-number += 5
-console.log(number)
-number -= 10
-console.log(number)
-number /= 5
-console.log(number)
-number *= 20
-console.log(number)
-number = number % 11
-console.log(number)
-number++
-console.log(number)
-number--
-console.log(number) 
-
-// Implicit type conversion
-
-document.querySelector('.form').addEventListener('submit', function (e) {
-  e.preventDefault()
-  let value = document.getElementById('amount').value
-  let name = document.getElementById('name').value
-  value = parseInt(value)
-  console.log('Hello ' + name + ' ' + 'You entered ' + value)
-}) */
-
-// Data Types - 7 total
-// Primitive - String, Number, Boolean, Null, Undefined, Symbol
-// Object - Arrays, Funtions, Objects
-
-// typeof - Operator (typeof variable) (typeof value)
-
-// String
-const text = 'Some text'
-// Number
-const number = 45
-// Boolean
-let valueA = true
-let valueB = false
-// Null
-const result = null
-// Undefined
-let valueC
-// Symbol(ES6)
-console.log(typeof text)
-console.log(typeof number)
-console.log(typeof valueA, typeof valueB)
-console.log(typeof result)
-console.log(typeof valueC)
+// Dot notation
+console.log(person.firstName)
+console.log(person.siblings[2])
+person.greeting()
