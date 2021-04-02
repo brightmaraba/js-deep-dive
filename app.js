@@ -1,95 +1,30 @@
-// Conditional Statements
-// >, <, >=, <=, ==, ===, !=, !===
-// if statement, else if, and !
+// Loops
+// Repeatedly execute a block of code while CONDITION is TRUE
+// while loop
 
-// const value = true
+let amount = 10
 
-// if (value) {
-//   console.log('hello world')
-// } else {
-//   console.log('Hello people!')
-// }
+while (amount > 0) {
+  console.log('I have ' + amount + " dollars and I'm going to the mall")
+  amount--
+}
 
-// const num1 = 6
-// const num2 = 10
-//const value = false
+// do while
 
-// if (num1 > num2) {
-//   console.log('first number is bigger than second')
-// } else if (num1 >= num2) {
-//   console.log('first number is equal to second number')
-// } else {
-//   console.log('second number is bigger than first')
-// }
+let money = 0
 
-// if (!value) {
-//   console.log('value is true')
-// }
+do {
+  console.log('You have ' + money + ' dollars')
+  money++
+} while (money < 10)
 
-// const value1 = num1 == num2
-// const value2 = num1 === num2 // Checks value and type
+// for loops
 
-// console.log(num1, num2, value1, value2)
+let i
+for (i = 0; i < 10; i++) {
+  console.log('and the number is ' + i)
+}
 
-// Logical operators || - OR, && - AND, ! - NOT
-// const firstName = 'bob'
-// const age = 24
-
-// if (firstName === 'bob' || age === 24) {
-//   console.log('hello there user')
-// } else {
-//   console.log('Wrong values')
-// }
-
-// if (firstName === 'bob' && age === 24) {
-//   console.log('Hello there user')
-// } else {
-//   console.log('Wrong values')
-// }
-
-// if (firstName != 'bob') {
-//   console.log('You are not bob!')
-// }
-
-// Dice using if and switch
-const dice = 0
-
-// if (dice === 1) {
-//   console.log('You got 1')
-// } else if (dice === 2) {
-//   console.log('You got 2')
-// } else if (dice === 3) {
-//   console.log('You got 3')
-// } else if (dice === 4) {
-//   console.log('You got 4')
-// } else if (dice === 5) {
-//   console.log('You got 5')
-// } else if (dice === 6) {
-//   console.log('You got 6')
-// } else {
-//   console.log('You did not throw the dice')
-// }
-
-// Implementing the same using switch
-switch (dice) {
-  case 1:
-    console.log('You got 1')
-    break
-  case 2:
-    console.log('You got 2')
-    break
-  case 3:
-    console.log('You got 3')
-    break
-  case 4:
-    console.log('You got 4')
-    break
-  case 5:
-    console.log('You got 5')
-    break
-  case 6:
-    console.log('You got 6')
-    break
-  default:
-    console.log('You did not roll the dice')
+for (let number = 11; number >= 0; number--) {
+  console.log('and the number is : ' + number)
 }
