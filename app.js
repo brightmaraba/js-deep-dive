@@ -1,116 +1,95 @@
-// STRINGS
-// Variable - Most basic building block
-// Variables - Store, access, modify === value
-// Declare, assignment operator, assign value
-// Rules
-// - Can contain digits, letters, underscore and $ sign
-// - must start with a letter, underscore _ or $
-// - cannot be keywords
-// - cannot start with a number
-// - case sensitive : FullName is not same as fullName nor fullname
-// - camelCase or camel_case or _camelCase
-let myName = 'Brian Koech'
-let address, state, postcode
+// Conditional Statements
+// >, <, >=, <=, ==, ===, !=, !===
+// if statement, else if, and !
 
-address = '25 A Sussex Street'
-state = 'Western Australia'
-postcode = 6061
+// const value = true
 
-console.log(myName, address, state, postcode)
+// if (value) {
+//   console.log('hello world')
+// } else {
+//   console.log('Hello people!')
+// }
 
-// Modify
+// const num1 = 6
+// const num2 = 10
+//const value = false
 
-myName = 'Koech Kimurgor'
-address = '15 Davenport St'
-console.log(myName, address, state, postcode)
+// if (num1 > num2) {
+//   console.log('first number is bigger than second')
+// } else if (num1 >= num2) {
+//   console.log('first number is equal to second number')
+// } else {
+//   console.log('second number is bigger than first')
+// }
 
-// Other key words to declare variables include var and const
-// Var was replaced by var and let i.e var is deprecated.
-// const are used to define variables that cannot be reassigned
+// if (!value) {
+//   console.log('value is true')
+// }
 
-const pi = 22 / 7
-let radius = 22
-let circleArea = pi * (radius * radius)
-console.log(circleArea)
+// const value1 = num1 == num2
+// const value2 = num1 === num2 // Checks value and type
 
-// Let's try to assign const pi
-// pi = 3.1; // Generates an Error
+// console.log(num1, num2, value1, value2)
 
-// Strings
-// String can be created by using both double quotes ("My name is Brian")
-// Or by using single quotes ('My name is Brian')
-// You cannot mix them
+// Logical operators || - OR, && - AND, ! - NOT
+// const firstName = 'bob'
+// const age = 24
 
-// What if therre is a singl word inside the senteces eg. Brian's?
-// Either escape 'Brian\'s car is awesome
-// OR use double quotes outside and single ' inside
-let mySentence = "Brian's car is awesome"
-let mySecondSentence = "Brian's car is awesomee"
-console.log(mySentence)
-console.log(mySecondSentence)
+// if (firstName === 'bob' || age === 24) {
+//   console.log('hello there user')
+// } else {
+//   console.log('Wrong values')
+// }
 
-// String concatanation - Combining string values
-// `` - Use backticks (template strings) easier option for dealing with strings
-const firstName = 'Brian'
-const lastName = 'Koech'
-let fullName = firstName + ' ' + lastName
+// if (firstName === 'bob' && age === 24) {
+//   console.log('Hello there user')
+// } else {
+//   console.log('Wrong values')
+// }
 
-console.log('Hello there, your full name is: ' + firstName + ' ' + lastName)
-console.log(fullName)
+// if (firstName != 'bob') {
+//   console.log('You are not bob!')
+// }
 
-// Create a website using strings
-const website = 'google'
-const url = 'https://www.' + website + '.com'
+// Dice using if and switch
+const dice = 0
 
-console.log(url)
+// if (dice === 1) {
+//   console.log('You got 1')
+// } else if (dice === 2) {
+//   console.log('You got 2')
+// } else if (dice === 3) {
+//   console.log('You got 3')
+// } else if (dice === 4) {
+//   console.log('You got 4')
+// } else if (dice === 5) {
+//   console.log('You got 5')
+// } else if (dice === 6) {
+//   console.log('You got 6')
+// } else {
+//   console.log('You did not throw the dice')
+// }
 
-// Numbers
-
-// Loosely Typed = You don't have to declare variable types
-
-const number = 34 // Integers
-let pants = 2.466 // Decimal aka Floating point numbers
-
-console.log(number * pants)
-
-// Basic math operations
-const number1 = 10
-const number2 = 5
-
-const add = number1 + number2
-const sub = number2 - number1
-const mult = number1 * number2
-const div = number2 / number1
-
-console.log(add, sub, mult, div)
-
-// +=, -=, /=, ++, --, %
-// Operate on variable in one line
-// Modulus % gives the reminder of a division
-
-let number = 50
-console.log(number)
-number += 5
-console.log(number)
-number -= 10
-console.log(number)
-number /= 5
-console.log(number)
-number *= 20
-console.log(number)
-number = number % 11
-console.log(number)
-number++
-console.log(number)
-number--
-console.log(number)
-
-// Implicit type conversion
-
-document.querySelector('.form').addEventListener('submit', function (e) {
-  e.preventDefault()
-  let value = document.getElementById('amount').value
-  let name = document.getElementById('name').value
-  value = parseInt(value)
-  console.log('Hello ' + name + ' ' + 'You entered ' + value)
-})
+// Implementing the same using switch
+switch (dice) {
+  case 1:
+    console.log('You got 1')
+    break
+  case 2:
+    console.log('You got 2')
+    break
+  case 3:
+    console.log('You got 3')
+    break
+  case 4:
+    console.log('You got 4')
+    break
+  case 5:
+    console.log('You got 5')
+    break
+  case 6:
+    console.log('You got 6')
+    break
+  default:
+    console.log('You did not roll the dice')
+}
