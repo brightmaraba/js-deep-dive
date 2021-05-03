@@ -125,14 +125,15 @@
 console.log(20 + null)
 console.log(20 + undefined)
 
-// Truthy and Falsy 
-const bool1 = true
-const bool2 = 2 > 1
+// Truthy and Falsy
+// const bool1 = true
+// const bool2 = 2 > 1
 
-if (bool1) {
-  console.log('Hey, it works')
-}
+// if (bool1) {
+//   console.log('Hey, it works')
+// }
 
-if (bool2){
-  console.log('Hey, it also works')
-}
+// if (bool2){
+//   console.log('Hey, it also works')
+// }
+
