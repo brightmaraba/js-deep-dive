@@ -64,13 +64,75 @@
 // console.log(specificNames)
 
 // Arrays and for loop
-const names = ['anna', 'bella', 'cate']
-const lastName = 'Koech'
-let newArray = []
+// const names = ['anna', 'bella', 'cate']
+// const lastName = 'Koech'
+// let newArray = []
 
-// for loop
-for (let index = 0; index < names.length; index++) {
-  newArray.push(`${names[index].toUpperCase()} ${lastName}`)
+// // for loop
+// for (let index = 0; index < names.length; index++) {
+//   newArray.push(`${names[index].toUpperCase()} ${lastName}`)
+// }
+
+// console.log(newArray)
+
+// Functions, return, if, arrays, for loop
+
+// const gas = [20, 40, 100]
+// const food = [10, 40, 50]
+
+// function calculateTotal(arr) {
+//   let total = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     total += arr[i]
+//   }
+//   if (total > 100) {
+//     console.log('Whoa! you are spending way too much!')
+//     return total
+//   }
+//   console.log('You are good total is less than 100')
+//   return total
+// }
+
+// const gasTotal = calculateTotal(gas)
+// const foodTotal = calculateTotal(food)
+// const randomTotal = calculateTotal([200, 45555, 5000])
+
+// console.log({
+//   gas: gasTotal,
+//   food: foodTotal,
+//   random: randomTotal,
+// })
+
+// Reference vs Value
+// Primitive data types
+// String, Number, Symbol, Boolean, Undefined, Null
+// Arrays, Functions, Objects = object
+// typeof
+// const number = 1
+// let number2 = number
+// number2 = 7
+
+// console.log(`the first number is  ${number}`)
+// console.log(`the second number is ${number2}`)
+
+// let person = {name: 'bob'}
+// let person2 = {...person}
+// person2.name = 'susy';
+// console.log(`the name of the first person is ${person.name}`)
+// console.log(`the name of the second person is ${person2.name}`)
+
+//Null, NaN, Undefined
+console.log(20 + null)
+console.log(20 + undefined)
+
+// Truthy and Falsy 
+const bool1 = true
+const bool2 = 2 > 1
+
+if (bool1) {
+  console.log('Hey, it works')
 }
 
-console.log(newArray)
+if (bool2){
+  console.log('Hey, it also works')
+}
