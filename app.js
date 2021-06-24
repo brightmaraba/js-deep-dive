@@ -6,3 +6,4 @@
 document.write('hello world')
 alert('hello world')
 console.log({ name: 'Brian' })
+console.log(10 + 20)
